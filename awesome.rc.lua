@@ -345,6 +345,8 @@ awful.rules.rules = {
       properties = { floating = false } },
     { rule = { instance = "crx_nckgahadagoaajjgafhacjanaoiihapd" },
       properties = { floating = true } },
+    { rule = { role = "pop-up" },
+      properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
