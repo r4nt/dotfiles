@@ -331,7 +331,7 @@ awful.rules.rules = {
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
-                     -- focus = true,
+                     focus = true,
                      keys = clientkeys,
                      floating = false,
                      buttons = clientbuttons } },
@@ -360,12 +360,12 @@ client.add_signal("manage", function (c, startup)
     -- awful.titlebar.add(c, { modkey = modkey })
 
     -- Enable sloppy focus
-    c:add_signal("mouse::enter", function(c)
-        if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
-            and awful.client.focus.filter(c) then
-            client.focus = c
-        end
-    end)
+    --c:add_signal("mouse::enter", function(c)
+    --    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
+    --        and awful.client.focus.filter(c) then
+    --        client.focus = c
+    --    end
+    --end)
 
     if not startup then
         -- Set the windows at the slave,
