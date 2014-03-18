@@ -331,7 +331,7 @@ awful.rules.rules = {
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
-                     focus = true,
+                     -- focus = true,
                      keys = clientkeys,
                      floating = false,
                      buttons = clientbuttons } },
