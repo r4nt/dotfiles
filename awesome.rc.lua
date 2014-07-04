@@ -10,6 +10,7 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 
+awful.util.spawn_with_shell("/usr/bin/xcompmgr")
 awful.util.spawn_with_shell("/usr/bin/gnome-settings-daemon")
 
 -- {{{ Error handling
