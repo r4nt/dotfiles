@@ -10,7 +10,7 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 
-awful.util.spawn("/usr/bin/gnome-settings-daemon")
+awful.util.spawn_with_shell("/usr/bin/gnome-settings-daemon")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
