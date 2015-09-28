@@ -12,6 +12,7 @@ require("debian.menu")
 
 awful.util.spawn_with_shell("/usr/bin/xcompmgr")
 awful.util.spawn_with_shell("/usr/bin/gnome-settings-daemon")
+awful.util.spawn_with_shell("/usr/xset dpms 0 0 600")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -201,6 +202,9 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    awful.key({ modkey }, "b", function ()
+      mywibox[mouse.screen].visible = not mywibox[mouse.screen].visible
+    end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
